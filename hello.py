@@ -11,10 +11,14 @@ Once you have that working, you're ready for class -- you can edit
 and run Python code; now you just need to learn Python!
 """
 
-##import sys
+import sys
 
 def main():
-    print("hello")
+	if len(sys.argv) >= 2:
+		name = sys.argv[1]
+	else:
+		name = 'World'
+    print('hello {}'.format(name))
 
 
 if __name__ == '__main__':
